@@ -26,6 +26,7 @@ namespace WebApplication3.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Food> Foods { get; set; }
 
         public static ApplicationDbContext Create()
         {

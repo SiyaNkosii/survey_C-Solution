@@ -12,7 +12,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WebApplication3.Models.Food>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.countsurvey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avargeAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pizzaPerc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pastaPerc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.papnworsePerc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EatOutCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WatchTvCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WatchMovCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LisRadioCount)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.countsurvey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avargeAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pizzaPerc)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.pastaPerc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.papnworsePerc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EatOutCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WatchTvCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WatchMovCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LisRadioCount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CusId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CusId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CusId })
+        </td>
+    </tr>
+}
+
+</table>
